@@ -26,15 +26,16 @@
             }
            
             $linenew=1;
-
+            $v=1;
             for ($i=1; $i<=3; $i++)	
             {	 
-            for($j=1;$j<=$linenew;$j++)	  
+            for($j=$v;$j<=$linenew;$j++)	  
             {	  	
             echo chr(64+$j)." ";	 
-            }	  	
+            }	  
+            $v++;	
             echo "<br/>";   	
-            $linenew++;
+            $linenew+=2;
             }  
 
    
