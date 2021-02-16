@@ -24,21 +24,19 @@
                 echo "<br/>";
 
             }
+           
+            $linenew=1;
 
-            $linenew=0;
-            for ( $a=0; $a<=3; $a++)
-            {
-                for ( $j="A"; $j<="F"; $j++)
-                {
-                echo $j;
-                echo "<br/>";
-                $linenew++;
-                }
-                $line--;
-               
-                echo "<br/>";
+            for ($i=1; $i<=3; $i++)	
+            {	 
+            for($j=1;$j<=$linenew;$j++)	  
+            {	  	
+            echo chr(64+$j)." ";	 
+            }	  	
+            echo "<br/>";   	
+            $linenew++;
+            }  
 
-            }
    
            
 ?>
