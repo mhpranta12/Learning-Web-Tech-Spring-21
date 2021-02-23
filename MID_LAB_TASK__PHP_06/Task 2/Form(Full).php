@@ -37,8 +37,8 @@
 			<legend>Change Password </legend>
 
 				Current Password<input type ="text" name="cpassword"> </input><br>
-				New Password<input type ="text"name="npassword"> </input><br>
-                Retype Password<input type ="text"name="rpassword"> </input><br>
+				<font color ="green">New Password</font><input type ="text"name="npassword"> </input><br>
+                <font color ="red">Retype Password</font><input type ="text"name="rpassword"> </input><br>
 
 
 
