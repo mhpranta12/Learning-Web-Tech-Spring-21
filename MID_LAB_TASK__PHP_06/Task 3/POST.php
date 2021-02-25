@@ -1,17 +1,24 @@
 <?php
 
                 if(isset($_POST['submit'])){
-                    $f=0;
+                 // a flag variable to ensure .......... 
+                    $atext = array ('jpg','jpeg','png');
+                    $files=$_FILES['ufile']['name'];
+                    $ext=pathinfo($files,PATHINFO_EXTENSION);
+                    
+                   
                     print_r($_FILES);
-                    if( ($_FILES['ufile']['size'])> 2000000)
+                    if( ($_FILES['ufile']['size'])> 2000000 || !in_array($ext,$atext) ) //checking size of file.....
                     {
-                        $f=1;
+                        echo "The file is too big or the format is not correct...";
+
                     }
                     else
                     {
-                        $f=0;
+                        echo"Ok";
                     }
-                    if (($_FILES['ufile']['type'])=='jpeg')
+
+                    /*if (($_FILES['ufile']['type'])=='jpeg') // checking the format ......
                     {
                         $f=0;
                     }
@@ -23,14 +30,12 @@
                     {
                         $f=0;
                     }
-                    if ($f==1)
+                    else 
                     {
-                        echo "The file is too big or the format is not correct...";
-                    }
-                    else
-                    {
-                        echo"Ok";
-                    }
+                        $f=1;
+                    }*/
+                   
+
                    
                 }
                 
