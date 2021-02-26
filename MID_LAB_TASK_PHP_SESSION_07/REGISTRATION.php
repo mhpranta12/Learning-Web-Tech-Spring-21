@@ -154,6 +154,8 @@
         $_SESSION['username']=$username;
 
         $_SESSION['password']=$password;
+        $_SESSION['email']=$email;
+
         header('location:LOGIN.php');
         }
 }

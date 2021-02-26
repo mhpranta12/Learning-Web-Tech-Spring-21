@@ -3,7 +3,7 @@
 <html>
 <head>
     
-    <title>User Registration Form</title>
+    <title>Forgot Password</title>
   
         <table align='center' border="1" width="1100px">
                          <tr>           
@@ -19,19 +19,14 @@
                         <tr>
                         <td height=240px;>
                             
-							<form method="POST" action="LOGIN_CHECK.php">
+							<form method="POST" action="Forgot_Password_Check.php">
 								<fieldset>
-										<legend>Login </legend>
+										<legend><b>FORGOT PASSWORD</b> </legend>
 							
-											Username  :<input type ="text" name="uname"> </input><br>
-											Password  :<input type ="password"name="upassword"> </input><br><hr>
-											 <input type ="checkbox"> </input> Remember Me
-							
+											Enter Email  : <input type ="text" name="email"> </input><br><hr>
 										
-										<br> <br>
-                                       
+											<br>
 													<input type="submit" name="submit" value="Submit">
-                                                    <a href= "FORGOT_PASSWORD.php">Forgot Password ? </a>
 									</fieldset>
 								</form>
                         </td>
