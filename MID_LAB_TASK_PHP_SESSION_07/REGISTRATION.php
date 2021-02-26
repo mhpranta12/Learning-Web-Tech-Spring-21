@@ -74,7 +74,7 @@
         }
         else 
         {
-            echo "User Name Error	!!!";
+            echo "User Name Error	!!! <br>";
             $f=1;
 
         }
@@ -98,14 +98,14 @@
 	    {
 		    if(strlen($password)<8)
             {
-			    echo "<p> Password Error	</p>";
+			    echo "<p> Password Error	</p><br>";
                  $f=1;
 		    }
 		
 	    }
         else
         {
-        echo "Password Error	";
+        echo "Password Error	<br>";
 
         }
 
@@ -152,15 +152,14 @@
         {
         echo"<p> Sucessfully Registered ! ! ! </p>";
         $_SESSION['username']=$username;
+
         $_SESSION['password']=$password;
+        header('location:LOGIN.php');
         }
-       
 }
 ?>
 
-<html>
-    <a href= "LOGIN.html">"Go To Login Page" </a>
-</html>
+
 
 
 
