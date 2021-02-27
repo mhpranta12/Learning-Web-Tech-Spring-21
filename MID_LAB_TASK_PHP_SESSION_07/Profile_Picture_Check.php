@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    
                 if(isset($_POST['submit'])){
                     $atext = array ('jpg','jpeg','png');                 // Array for string matching   .....
                     $files=$_FILES['ufile']['name'];                     //getting the specific file to read extension   .....
@@ -14,7 +14,7 @@
                     else
                     {
                         echo"Profile Picture Changed";
-                        $_SESSION['dp']=['ufile'];
+                       
                     }
 
                 }
