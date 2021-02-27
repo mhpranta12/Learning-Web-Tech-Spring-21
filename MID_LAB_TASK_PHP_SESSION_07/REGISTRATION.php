@@ -54,6 +54,7 @@
     $password = $_POST['upassword'];
     $cpassword = $_POST['cpassword'];
     $day = $_POST['myday'];
+    $gender=$_POST['gender'];
     $month = $_POST['mymonth'];
     $year = $_POST['myyear'];
 
@@ -155,6 +156,11 @@
 
         $_SESSION['password']=$password;
         $_SESSION['email']=$email;
+        $_SESSION['gender']=$gender;
+        $_SESSION['day']=$day;
+        $_SESSION['month']=$month;
+        $_SESSION['year']=$year;
+
 
         header('location:LOGIN.php');
         }
