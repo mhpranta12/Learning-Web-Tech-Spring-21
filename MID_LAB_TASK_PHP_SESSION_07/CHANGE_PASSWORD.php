@@ -9,8 +9,8 @@
 <table align='center' border="1" width="1100px">
                          <tr>           
                             <th colspan="2"> <img src="logo.png" width=160px height=100px align="left">
-                                Logged in as <?php echo $_SESSION['username'];?>|
-                                <a href="LOGIN.php" align='right';>Logout</a> 
+                            <p align='right'> Logged in as <?php echo $_SESSION['username'];?>|
+                                <a href="LOGIN.php" align='right';>Logout</a> </p>
                             </th>
                             
                         </tr> 
