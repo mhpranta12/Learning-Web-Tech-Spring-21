@@ -9,7 +9,7 @@
 <html>
 <head>
     
-    <title>DashBoard</title>
+    <title>Profile</title>
   
         <table align='center' border="1" width="1100px">
                          <tr>           
@@ -44,6 +44,7 @@
                 Gender  : <?php echo $_SESSION['gender'] ?><br><hr>
                 Date Of Birth   : <?php echo $_SESSION['day'] ?> / <?php echo $_SESSION['month'] ?> /<?php echo $_SESSION['year'] ?><br><hr>
                 <a href ="EDIT_PROFILE.php">Edit Profile</a><br><br>
+                
                 <p align='right' ><a href ="PROFILE_PICTURE.php" >Change</a></p>
 
                
