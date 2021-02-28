@@ -13,9 +13,21 @@
                     }
                     else
                     {
+                        $file_info = $_FILES['ufile'];
+                    $path = 'Upload/'.$file_info['name'];
+                
+                    if(move_uploaded_file($file_info['tmp_name'], $path))
+                    {
                         echo"Profile Picture Changed";
+                    }else{
+                        echo "error";
+                    }
+                        
                        
                     }
+
+                    
+
 
                 }
 ?>                
