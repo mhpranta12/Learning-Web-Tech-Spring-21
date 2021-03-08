@@ -19,33 +19,32 @@
             if (file_exists('../Model/udata.json'))
             {
                 $get_data= file_get_contents('../Model/udata.json'); 
-                $array_data =json_decode($get_data);
+                $array_data =json_decode($get_data,true);
                
-                if ($uname!="" && $password!="")
+                if ($uname !="" && $password !="")
                 {
                 
                     $uinfo = ['name'=>$uname ,
-                    'password'=>$password ];
+                              'password'=>$password ];
                     
                    foreach($array_data as $check)
                    {
 
-                        if( $check->name==$uname && $check->password ==$password )
+                        if( $check['name'] == $uname && $check['password'] == $password )
                         { 
                             
-                            echo"Login Success";
+                          
                             header('location: ../View/home.php');
                             break;
                            
                         }
-
-                        if( $check->name!=$uname && $check->password !=$password )
-                        { 
-                            header('location:C:\xampp\htdocs\WebTech\View\home.php');
-                            echo"Err";
+                        else
+                        {
+                            echo "Credentials Error";
                             break;
-                           
                         }
+
+                        
                         
                        
                    }
