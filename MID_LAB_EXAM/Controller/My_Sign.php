@@ -1,14 +1,15 @@
 <?php
         if($_POST["submit"])
         {
+            $uid=$_POST["uid"];
             $uname=$_POST["uname"];
             $password=$_POST["upassword"];
-            $email=$_POST["email"];
+           
             $utype=$_POST["utype"];
             $user = [
                 'name'=>$uname ,
                 'password'=>$password,
-                'email'=>$email
+                
 
             ];
             $json=json_encode($user);
@@ -22,6 +23,7 @@
                 $array_data =json_decode($get_data);
                 $uinfo = array('name'=>$uname ,
                 'password'=>$password,
+                'uid'=>$uid,
                 'utype'=>$utype
             );
                 $array_data[]=$uinfo;

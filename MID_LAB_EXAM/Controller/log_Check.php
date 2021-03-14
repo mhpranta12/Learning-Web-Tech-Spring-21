@@ -3,12 +3,12 @@
 
            if(isset($_POST['submit']))
            {
-            $uname=$_POST["uname"];
+            $uid=$_POST["uid"];
             $password=$_POST["upassword"];
-            $_SESSION['name']=$uname;
+            $_SESSION['uid']=$uid;
             $_SESSION['password']=$password;
 
-            $user= array('name'=>$uname ,
+            $user= array('uid'=>$uid ,
             'password'=>$password );
 
             
@@ -21,16 +21,16 @@
                 $get_data= file_get_contents('../Model/udata.json'); 
                 $array_data =json_decode($get_data,true);
                
-                if ($uname !="" && $password !="")
+                if ($Uid !="" && $password !="")
                 {
                 
-                    $uinfo = ['name'=>$uname ,
+                    $uinfo = ['uid'=>$uid ,
                               'password'=>$password ];
                     
                    foreach($array_data as $check)
                    {
 
-                        if( $check['name'] == $uname && $check['password'] == $password )
+                        if( $check['uid'] == $uid && $check['password'] == $password )
                         { 
                             
                           
