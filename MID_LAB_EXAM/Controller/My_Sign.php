@@ -3,13 +3,12 @@
         {
             $uname=$_POST["uname"];
             $password=$_POST["upassword"];
-            $utype =  $_POST["utype"];
             $email=$_POST["email"];
+            $utype=$_POST["utype"];
             $user = [
                 'name'=>$uname ,
                 'password'=>$password,
-                'email'=>$email,
-                'gender'=>$gender
+                'email'=>$email
 
             ];
             $json=json_encode($user);
@@ -23,14 +22,13 @@
                 $array_data =json_decode($get_data);
                 $uinfo = array('name'=>$uname ,
                 'password'=>$password,
-                'email'=>$email,
                 'utype'=>$utype
             );
                 $array_data[]=$uinfo;
                 $json_data=json_encode($array_data);
                 if(file_put_contents('../Model/udata.json',$json_data))
                 {
-                    header("login.html");
+                    echo "Registered";
                 }
                 else
                 {
