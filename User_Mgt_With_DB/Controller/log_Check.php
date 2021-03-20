@@ -10,10 +10,10 @@
         $result= mysqli_query($conn,$query);
         
         
-        while ($row = mysqli_fetch_assoc($result))
+        while ($data = mysqli_fetch_assoc($result))
         {
            
-                    if ($row['name']==$name && $row['password']==$password )
+                    if ($data['name']==$name && $data['password']==$password )
                     {
                         header('location: ../View/loggedin_home.php');
                         break;
