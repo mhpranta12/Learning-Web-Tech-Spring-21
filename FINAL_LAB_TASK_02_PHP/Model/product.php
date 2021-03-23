@@ -28,5 +28,16 @@
 	}else{
 		return false;
 	}
-}
+    }
+
+    function getProductbyName($name)
+    {
+	$conn = getConnection();
+	$sql = "select * from products where name='{$name}";
+	$result = mysqli_query($conn, $sql);
+	$row = mysqli_fetch_assoc($result);
+	return $row;
+    }
+
+
 ?>
