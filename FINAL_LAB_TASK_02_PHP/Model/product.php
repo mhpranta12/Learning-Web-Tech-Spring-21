@@ -3,10 +3,11 @@
     function insertProduct($product)
     {
 	$conn = getConnection();
-    $sql = "insert into products values('', '{$product['name']}', '{$product['buyingprice']}', '{$product['sellingprice']}', '{$product['displayable']}')";
+    $sql = "insert into products values('', '{$product['name']}', '{$product['buyingprice']}', '{$product['sellingprice']}','','')";
 	$result = mysqli_query($conn, $sql);
 
-	if($result){
+	if($result)
+    {
 		return true;
 	}
     else
