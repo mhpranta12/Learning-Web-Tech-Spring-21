@@ -6,7 +6,7 @@
             $name=$_POST["name"];
             $buyingprice=$_POST["buyingprice"];
             $sellingprice=$_POST["sellingprice"]; 
-            $profit=$buyingprice-$sellingprice;
+            $profit=$sellingprice-$buyingprice;
             $product = [
                 'name'=>$name ,
                 'buyingprice'=>$buyingprice,
