@@ -6,11 +6,12 @@
             $name=$_POST["name"];
             $buyingprice=$_POST["buyingprice"];
             $sellingprice=$_POST["sellingprice"]; 
-            
+            $profit=$buyingprice-$sellingprice;
             $product = [
                 'name'=>$name ,
                 'buyingprice'=>$buyingprice,
-                'sellingprice'=>$sellingprice
+                'sellingprice'=>$sellingprice,
+                'profit'=>$profit,
                 
                  ];
             $status= insertProduct($product);

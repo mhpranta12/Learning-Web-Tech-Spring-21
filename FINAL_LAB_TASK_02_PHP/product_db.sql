@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2021 at 04:23 AM
+-- Generation Time: Mar 23, 2021 at 04:36 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -37,6 +37,14 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `buying price`, `selling price`, `profit`, `displayable`) VALUES
+(3, 'samsung', 23000, 24000, -1000, 0),
+(4, 'HTC', 34000, 37000, -3000, 0);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -54,7 +62,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
