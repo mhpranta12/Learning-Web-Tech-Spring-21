@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Name </title>
+          
+                           <h1 id="n1"> Name</h1>
+                                <style>
+                                    .c1
+                                    {
+                                            background-color: rgb(125, 146, 238);
+                                            width: 300px;
+                                    }
+                                    .c2
+                                    {
+                                            background-color:ghostwhite;
+                                            height: 18px;
+                                            width: 300px;
+                                    }
+                                </style>
+                                
+                                 
+                                    Name  <br> <input type ="text" class="c2" name="name" width="200px" id="ip1" > </input><br><br>
+                                   <input type="submit" name="submit" class="c1" value="Change Heading" onclick="action()">      
+                                <script> 
+                                let a =20 ; 
+                                function action ()
+                                {
+                                //document.write('done');
+                                let c = document.getElementById('ip1').value;
+                                document.getElementById('n1').innerHTML=c;
+                                
+                                }
+                                </script>
+                                <br> <br><hr>
+                                            
+                            </fieldset>
+                            </form>
+      
+</body>
+</html>
