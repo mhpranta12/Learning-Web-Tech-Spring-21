@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Name </title>
+          
+                           <h1 id="n1"> Email</h1>
+                           <h4 id="sts"> Okay</h4>
+                                <style>
+                                    .c1
+                                    {
+                                            background-color: rgb(125, 146, 238);
+                                            width: 300px;
+                                    }
+                                    .c2
+                                    {
+                                            background-color:ghostwhite;
+                                            height: 18px;
+                                            width: 300px;
+                                    }
+                                </style>
+                                
+                                 
+                                    Email  <br> <input type ="text" class="c2" name="email" width="200px" id="ip1" > </input><br><br>
+                                   <input type="submit" name="submit" class="c1" value="Submit" onclick="action()">      
+                                <script> 
+                                let a =20 ; 
+                                function action ()
+                                {
+                               
+                                let c = document.getElementById('ip1').value;
+
+                                        var n = c.includes("@"); // checking the existance of a string .This function return true/false 
+                                        var m = c.includes(".");
+                                        if(n==true && m==true)
+                                        {
+                                                document.getElementById('sts').innerHTML="Okay";
+                                        }
+                                        else
+                                        document.getElementById('sts').innerHTML="Error";
+                                        
+                                }
+                                
+                                </script>
+                                <br> <br><hr>
+                                            
+                            </fieldset>
+                            </form>
+      
+</body>
+</html>
