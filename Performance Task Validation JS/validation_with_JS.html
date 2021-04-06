@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Validation Page  </title>
+
+        <h1 id="n1"> Doctor's Name</h1>
+        
+        <style>
+            .c1
+            {
+                    background-color: rgb(125, 146, 238);
+                    width: 300px;
+            }
+            .c2
+            {
+                    background-color:ghostwhite;
+                    height: 18px;
+                    width: 300px;
+            }
+        </style>
+        
+         
+            Doctor's Name  <br> <input type ="text" class="c2" name="name" width="200px" id="nm1" > </input><br>
+            <h4 id="sts"> .</h4> <br>
+           <input type="submit" name="submit" class="c1" value="Submit" onclick="nameaction()">      
+        <script> 
+        let a =20 ; 
+        function nameaction()
+        {
+        let c = document.getElementById('nm1').value;
+        let check = /^[A-Za-z]+$/;
+        if(c=="")
+        {
+                document.getElementById('sts').innerHTML="Name can't be empty";
+        }
+        else
+        {
+                if(c.match(/[a-z]/) || c.match(".") || c.match("-")) 
+                {
+                document.getElementById('sts').innerHTML="Yes A-Z";
+                }
+                else
+                {
+                document.getElementById('sts').innerHTML="No";
+                }
+                if(c.charAt(0).match(/[a-z]/))
+                {
+                        document.getElementById('sts').innerHTML="Yes OK";
+                }
+                else
+                
+                
+        }
+       
+        
+        }
+        </script>
+        <br> <br><hr>
+                    
+    </fieldset>
+    </form>
+
+    
+
+    <h1 id="n1"> Doctor's Email</h1>
+   
+          
+            Doctor's Email  <br> <input type ="text" class="c2" name="email" width="200px" id="em1" > </input>  <h4 id="sts2"> .</h4><br><br> 
+            <input type="submit" name="submit" class="c1" value="Submit" onclick="emailaction()">      
+         <script> 
+         let a =20 ; 
+         function emailaction ()
+         {
+         
+         
+         let email = document.getElementById('em1').value;
+         if(email=="")
+         {
+                 document.getElementById('sts2').innerHTML="Email can't be empty";
+         }
+         else
+         {
+                 var n = email.includes("@"); // checking the existance of a string .This function return true/false 
+                 var m = email.includes(".");
+                 if(n==true && m==true)
+                 {
+                         document.getElementById('sts2').innerHTML="Okay";
+                 }
+                 else
+                 document.getElementById('sts2').innerHTML="Email Error";
+                 
+         }
+         }
+         </script>
+         <br> <br><hr>
+                     
+     
+        </fieldset>
+        </form>
+                        <fieldset> 
+                                <legend> Gender</legend>
+                           
+                           
+                                
+                                    Doctor's Gender  <br> <input type="radio" name="gender" id="r1">Male
+                                    <input type="radio" name="gender" id="r2">Female
+                                    <input type="radio" name="gender" id="r3">Other
+                                    <br/> <br>
+                                    <h4 id="sts3"> .</h4>
+                                   <input type="submit" name="submit" class="c1" value="Submit" onclick="genderaction()">      
+                                <script> 
+                                
+                                function genderaction ()
+                                {
+                                
+                               
+                                let a = document.getElementById('r1').checked;
+                                let b = document.getElementById('r2').checked;
+                                let c = document.getElementById('r3').checked;
+
+                                if(a==false && b==false && c==false)
+                                {
+                                       
+                                        document.getElementById('sts3').innerHTML="Gender can't be empty";
+                                }
+                                else
+                                {
+                                        
+                                        document.getElementById('sts3').innerHTML="Ok";
+                                }
+                               
+                                
+                                }
+                                </script>
+                                <br> <br><hr>
+                                            
+                            </fieldset>
+                            </form>
+
+
+
+                            <fieldset> 
+                                <legend> Date of Birth</legend>
+                           
+                           
+                                
+                                    DD  <br> <input type ="text" name="dd" id="dd" >MM   <input type ="text" name="dd" id="mm" > YY   <input type ="text" name="dd" id="yy" >
+                                     <br>
+                                    <h4 id="sts4"> .</h4>
+                                    <h4 id="sts5"> .</h4>
+                                    <h4 id="sts6"> .</h4>
+                                   <input type="submit" name="submit" class="c1" value="Submit" onclick="dobaction()">      
+                                <script> 
+                                
+                                function dobaction ()
+                                {
+                                
+                               
+                                let a = document.getElementById('dd').value;
+                                let b = document.getElementById('mm').value;
+                                let c = document.getElementById('yy').value;
+
+                                if(a=="" || b=="" || c=="")
+                                {
+                                       
+                                        document.getElementById('sts4').innerHTML="Any field can't be empty";
+                                }
+                                else 
+                                {
+                                    if (a>31 || a<1)
+                                    {
+                                        document.getElementById('sts4').innerHTML="Date Error";
+                                    }
+                                    else
+                                    {
+                                        document.getElementById('sts4').innerHTML="Date Okay";
+                                    }
+                                    if (b>12 || b<0)
+                                    {
+                                        document.getElementById('sts5').innerHTML="Month Error";
+                                    }
+                                    else
+                                    {
+                                        document.getElementById('sts5').innerHTML="Month Okay";
+                                    }
+
+                                      if (c>2021  || b<1800)
+                                    {
+                                        document.getElementById('sts6').innerHTML="Year Error";
+                                    }
+                                    else
+                                    {
+                                        document.getElementById('sts6').innerHTML="Year Okay";
+                                    }  
+                                        
+                                }
+                               
+                                
+                                }
+                                </script>
+                                <br> <br><hr>
+                                            
+                            </fieldset>
+                            </form>
+      
+</body>
+</html>
