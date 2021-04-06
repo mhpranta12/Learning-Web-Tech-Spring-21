@@ -202,6 +202,59 @@
                                             
                             </fieldset>
                             </form>
+
+
+                            <fieldset> 
+                                <legend> Degree</legend>
+                           
+                           <h4 id="sts7"> .</h4>
+                                <style> 
+                                    .c1
+                                    {
+                                            background-color: rgb(125, 146, 238);
+                                            width: 300px;
+                                    }
+                                    .c2
+                                    {
+                                            background-color:ghostwhite;
+                                            height: 18px;
+                                            width: 300px;
+                                    }
+                                </style>
+                                
+                                 
+                                    <br> <input type="checkbox" name="gender" id="r1">SSC
+                                    <input type="checkbox" name="gender" id="r2">HSC
+                                    <input type="checkbox" name="gender" id="r3">BSC
+                                    <br/> <br>
+                                   <input type="submit" name="submit" class="c1" value="Submit" onclick="action()">      
+                                <script> 
+                                
+                                function action ()
+                                {
+                                
+                               
+                                let a = document.getElementById('r1').checked;
+                                let b = document.getElementById('r2').checked;
+                                let c = document.getElementById('r3').checked;
+
+                                if(a==false && b==false && c==false)
+                                {
+                                       
+                                        document.getElementById('sts7').innerHTML="Please check any degree ";
+                                }
+                                else
+                                {
+                                       document.getElementById('sts7').innerHTML="Ok";
+                                }
+                               
+                                
+                                }
+                                </script>
+                                <br> <br><hr>
+                                            
+                            </fieldset>
+                            </form>
       
 </body>
 </html>
