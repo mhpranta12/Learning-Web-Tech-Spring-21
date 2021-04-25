@@ -1,0 +1,22 @@
+body{
+	background-color: #b2bec3;
+	width: 100%;
+	height: 100vh;
+
+	}
+.appoinment{
+
+	width: 700px;
+	margin: 0px auto;
+	opacity: .7;
+	margin-top: 70px;
+	padding: 15px;
+	border: 1px solid #fff;
+}
+
+.appoinment form a
+{
+	color: blue;
+
+}
+

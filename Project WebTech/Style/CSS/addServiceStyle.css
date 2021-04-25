@@ -1,0 +1,18 @@
+.form-control.error input{
+    border-color: red;
+}
+
+.form-control.success input{
+    border-color: green;
+}
+
+
+.form-control small{
+    color: red;
+    position: absolute;
+    visibility: hidden;
+}
+
+.form-control.error small{
+    visibility: visible;
+ }

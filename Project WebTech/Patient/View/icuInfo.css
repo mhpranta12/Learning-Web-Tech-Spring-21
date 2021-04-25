@@ -1,0 +1,37 @@
+body{
+	background-color: #b2bec3;
+	width: 100%;
+	height: 100vh;
+
+	}
+.icuInfo{
+
+	width: 700px;
+	margin: 0px auto;
+	opacity: .7;
+	margin-top: 70px;
+	padding: 15px;
+	border: 1px solid #fff;
+}
+.icuInfo table{
+	width: 100%;
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+.icuInfo th{
+	border: 2px solid black;
+	height: 40px;
+
+}
+.icuInfo td{
+	border: 2px solid black;
+	height: 25px;
+	padding-left: 10px;
+
+}
+.icuInfo form a
+{
+	color: blue;
+
+}
+

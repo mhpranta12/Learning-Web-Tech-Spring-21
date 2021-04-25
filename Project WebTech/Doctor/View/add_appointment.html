@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Add Appointment</title>
+  
+        
+                         
+                    
+    <link rel="stylesheet" type="text/css" href="../View/style.css" />
+
+                            <fieldset>
+
+                                <legend><b> Add Appointment  </b></legend>
+                                 <form method="POST" class="form" action="../Controller/Add_Appointment_check.php">
+                                    Serial No.  : <input type ="number" name="serial"placeholder="Enter Serial "> </input><br><hr>
+                                    Patient's Name  : <input type ="text" name="name" width="200px" placeholder="Enter Name"> </input><br><hr>
+                                   
+                    
+                                    Patient's Problem  : <input type ="text" name="problem"placeholder="Enter Problem"> </input><br><hr>
+                                    Patient's Phone  : <input type ="text" name="phone" width="200px" value="01"> </input><br><hr>
+                    
+                            <fieldset>
+                                <legend>Gender</legend>
+                                <input type="radio"  name="gender" value="Male">Male
+                                <input type="radio" name="gender" value="Female">Female
+                                <input type="radio" name="gender" value="Others"> Others <br> <br>
+                                            
+                            </fieldset><hr>
+                    
+                          
+                                <br> <br><hr>
+                                            <input type="submit"  class="fsubmit" name="submit" value="Submit"><br> <br>
+                                            <input type="reset" class="fsubmit">
+                            </fieldset>
+                            </form>
+                        
+    
+    
+</body>
+</html>

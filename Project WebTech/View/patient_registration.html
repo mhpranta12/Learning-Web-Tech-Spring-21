@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+         <script type="text/javascript">
+
+
+            function isNumeric(n) {
+                return !isNaN(parseFloat(n)) && isFinite(n);
+            }
+
+
+        function reg_validation()
+        {
+           let fName =  document.getElementById('fName').value;
+           let lName =  document.getElementById('lName').value;
+           let email = document.getElementById('email').value;
+           let phone =  document.getElementById('phone').value;
+           let password = document.getElementById('password').value;
+           let day =  document.getElementById('day').value;
+           let month = document.getElementById('month').value;
+           let year = document.getElementById('year').value;
+           let gender = document.getElementsByName('gender').value;
+
+
+
+           let f1 = false;
+
+          if(fName=="")
+            {
+                document.getElementById('p_fName').innerHTML = 'User name must  given';
+                document.getElementById('p_fName').style.color = "#FF0000";
+                f1= true;
+       
+            }
+
+             if(lName=="")
+            {
+                document.getElementById('p_lName').innerHTML = 'User name must  given';
+                document.getElementById('p_lName').style.color = "#FF0000";
+                f1= true;
+       
+            }
+
+            if(password == "" || password.length < 6)
+            {
+                document.getElementById('p_password').innerHTML = 'User password must be valid and filled';
+                document.getElementById('p_password').style.color = "#FF0000";
+                f1= true;
+
+            }
+        
+
+
+            let dot = email.indexOf(".");
+            let atSymbol = email.indexOf('@');
+
+
+             if(email=="" || email.length <=5 || email.indexOf('@') < 1 || dot === email.length - 1)
+           {
+                document.getElementById('p_email').innerHTML = 'User email must be valid and filled';
+                document.getElementById('p_email').style.color = "#FF0000";
+                f1= true;
+           
+           }
+
+
+           if(phone=="" || phone.length != 11)
+           {
+                document.getElementById('p_phone').innerHTML = 'phone no.  must be valid and filled';
+                document.getElementById('p_phone').style.color = "#FF0000";
+                f1= true;
+           
+           }
+
+
+           if(day=="" || day > 31 || month==""  || year=="" || month>12 || year.length >4)
+           {
+            document.getElementById('p_dob').innerHTML = 'DoB  must be valid and filled';
+            document.getElementById('p_dob').style.color = "#FF0000";
+            f1= true;
+           
+           }
+
+
+            if ( (document.getElementById("male").checked === false) && (document.getElementById("female").checked === false )  && (document.getElementById("other").checked === false))
+            {
+                document.getElementById('p_gender').innerHTML = 'Please slect a geneder.';
+                document.getElementById('p_gender').style.color = "#FF0000";
+                f1= true;
+            } 
+
+
+          
+
+           if(f1)
+           {
+            return false;
+           }       
+
+
+        }
+    </script>
+
+
+
+
+
+
+
+</head>
+<body>
+    <div id = "frm">
+ 
+        <form class="patient_reg_form" name="form" method="POST"  onsubmit="return reg_validation();" action="../Controller/patient_validation.php">
+            <table width="60%"  align="center" border="1" class="table table-dark">
+
+                <tr>
+                    <th colspan="3">
+                       <h1>Patient Registration</h1> 
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" id="fName" name="fName" placeholder="">
+                        <span id="p_fName" class="text-danger font-weight-bold"></span>
+                    </td>
+                    
+                </tr>
+
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" id="lName" name="lName" placeholder="">
+                        <span id="p_lName" class="text-danger font-weight-bold"></span>
+                    </td>
+                </tr>
+
+ 
+                <tr>
+                    <td>Email Address: </td>
+                    <td><input type="text" id="email" name="email" placeholder="patient@example.com">
+                        <span id="p_email" class="text-danger font-weight-bold"></span>
+                    </td>
+                </tr>
+
+                 <tr>
+                    <td>Phone No.  </td>
+                    <td><input type="text" id="phone" name="phone" placeholder="+880XXXXXXXXXX">
+                        <span id="p_phone" class="text-danger font-weight-bold"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" id="password" name="password">
+                        <span id="p_password" class="text-danger font-weight-bold"></span>
+                    </td>
+                </tr>    
+                
+
+                
+                 <tr>
+                    <td>Date of Birth: </td>
+                    <td><input size="3" type="text" id="day" name="day" placeholder="dd">
+                        /<input size="3" id="month" type="text" name="month" placeholder="mm">
+                        /<input size="4" id="year" type="text" name="year" placeholder="yyyy">
+
+                        (dd/mm/yyyy)
+                        <span id="p_dob" class="text-danger font-weight-bold"></span>
+                    </td>
+                </tr>
+ 
+                
+                <tr>
+                    <td>Blood Group: </td>
+                    <td>
+                    <select id="bg" name="blood_group">
+                        <option value="def">--Select Group--</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B-">B-</option>
+                        <option value="B+">B+</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+
+                    </select>
+                    </td>
+                </tr>
+ 
+                <tr>
+                    <td>Gender: </td>
+                    <td><input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other"><label for="other">Other</label>
+                    <span id="p_gender" class="text-danger font-weight-bold"></span>
+                    </td>
+                   
+                </tr>
+
+
+                <div class="form-check">
+                    <tr>
+                        <td>Medical History: </td>
+                            <td><input type="checkbox" id="1" name="med_history[]" value="Diabetes">
+                            <label type="checkbox" for="1">Diabetes</label>
+
+                            <input type="checkbox" id="2" name="med_history[]" value="Allergies">
+                            <label for="2">Allergies</label>
+
+                            <input type="checkbox" id="3" name="med_history[]" value="Taiphoid">
+                            <label for="3">Taiphoid</label>
+
+                            <input type="checkbox" id="4" name="med_history[]" value="High Blood Pressure">
+                            <label for="4">High Bloood Pressure</label>
+
+                             <input type="checkbox" id="5" name="med_history[]" value="Low Blood Pressure">
+                            <label for="5">Low Blood Pressure</label>
+
+                            
+                            <input type="checkbox" id="6" name="med_history[]" value="Thyroid Disease">
+                            <label for="6">Thyroid Disease</label>
+
+                            
+                            <input type="checkbox" id="7" name="med_history[]" value="Drug or Alcohol Dependency">
+                            <label for="7">Drug or Alcohol Dependency</label>
+
+
+                        </td>
+
+                 </tr>
+                    
+
+                </div>
+ 
+                
+                <tr>
+                    <td>Complain</td>
+                    <td><input type="text" id="complain" name="complain" placeholder=""></td>
+                </tr>
+
+                 <tr>
+                    <td>Reference</td>
+                    <td><input type="text" id="reference" name="reference" placeholder=""></td>
+                </tr>
+ 
+                <tr>
+                    <td>Photo: </td>
+                    <td><input type="file" id="upload" name="profile_pic"></td>
+                </tr>
+
+
+                <tr>
+                    <td colspan="3">
+                        <br>
+                    </td>
+                    
+                </tr>
+ 
+                <tr align="right">
+
+                    <td colspan="2"><input type="Submit" name="reg_btn" class="btn btn-info">
+                        <input type="Submit" name="reset" value="Reset" class="btn btn-danger">
+                    </td>
+                    
+                </tr>
+
+
+ 
+            </table>
+        </form>
+ 
+    </div>
+
+   
+
+
+
+ 
+</body>
+
+
+
+
+</html>

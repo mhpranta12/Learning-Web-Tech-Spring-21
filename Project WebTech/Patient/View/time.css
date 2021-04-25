@@ -1,0 +1,38 @@
+body{
+	background-color: #b2bec3;
+	width: 100%;
+	height: 100vh;
+
+	}
+.time{
+
+	width: 1200px;
+	margin: 0px auto;
+	opacity: .7;
+	margin-top: 70px;
+	padding: 15px;
+	border: 1px solid #fff;
+}
+.time table{
+	width: 100%;
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+.time th{
+	border: 2px solid black;
+	height: 40px;
+
+}
+.time td{
+	border: 2px solid black;
+	height: 25px;
+	padding-left: 10px;
+
+}
+.time form a
+{
+	color: blue;
+
+}
+
+

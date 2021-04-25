@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Login Form</title>
+     <style>  
+		.logpage{
+					background-image: url("../View/doctorlogin.png");
+					height: 400px;
+					object-position: bottom;
+				}
+				.bttn{
+					background-color: cadetblue;
+					width: 200px;
+					object-position: center;
+					height: 35px;
+				}
+     </style>
+       
+                       
+                            
+                       
+	<link rel="stylesheet" type="text/css" href="../View/style.css" />
+                            
+	<div class="logpage">			
+	<form align='center' class="login" method="POST" action="../Controller/Login_Check.php">
+								
+										<legend>Doctor's Login </legend>
+							
+											Username  :<input type ="text" name="uname"> </input><br> <br>
+											Password  :<input type ="password"name="upassword"> </input><br><hr>
+											 <input type ="checkbox" name="remember"> </input> Remember Me
+							
+										
+										<br> <br>
+                                       
+													<input type="submit" class="bttn"name="submit" value="Submit"> <br>
+                                                    <a href= "../View/forget_password.html">Forgot Password ? </a>
+									
+								</form>
+							</div>			
+    
+    </form>
+</body>
+</html>

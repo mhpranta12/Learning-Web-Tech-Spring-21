@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Patients  Registration  </title>
+
+   <link rel="stylesheet" type="text/css" href="appoinment.css">
+
+    <body>
+        <div class="appoinment">
+    <form method="POST" action="../Controller/appoinmentCheck.php">
+
+        
+          <center><h1>Patient Registration</h1></center>
+                                  <table>
+                                    <tr>
+                                        <td>Serial No </td>
+                                        <td> <input type ="text" class="c2" name="name" width="200px" id="nm1" >  </input></td>
+                                        <td><font color="red" id="sts1"> .</font></td>
+                                        </tr>
+
+                                             <script> 
+
+                                                function getname()
+                                                {
+                                                        let cname = document.getElementById('nm1').value;
+                                                        return cname;
+                                                }
+                                                function snameaction()
+                                                {
+                                               
+                                                var x= getname();
+                                                if(x=="")
+                                                {
+                                                        document.getElementById('sts1').innerHTML="Serial can't be empty";
+                                                }
+                                                else
+                                                {
+                                                          document.getElementById('sts1').innerHTML="  ";
+                                                       
+                                                        
+                                                }
+                                               
+                                                
+                                                }
+                                            </script>
+
+
+                                    <tr>
+                                        <td>Patient's Name </td>
+                                        <td><input type ="text" class="c2" name="name" width="200px" id="nm1" > </input> </input></td>
+                                        <td><font color="red" id="sts"> .</font></td>
+                                        </tr>
+
+
+                                        <script>
+                                         function getname()
+                                        {
+                                                let cname = document.getElementById('nm1').value;
+                                                return cname;
+                                        }
+                                        function nameaction()
+                                        {
+                                       
+                                        var x= getname();
+                                        if(x=="")
+                                        {
+                                                document.getElementById('sts').innerHTML="Name can't be empty";
+                                        }
+                                        else
+                                        {
+                                                  document.getElementById('sts').innerHTML="  ";
+                                               
+                                                
+                                        }
+               
+                
+                }
+                </script>
+                                    <tr>
+                                        <td>Email </td>
+                                        <td><input type ="text" class="c2" name="email" width="200px" id="em1" ></input> </td>
+                                        <td><font color="red"id="sts2" > .</font>  
+                                        </td>
+                                          </tr>
+
+                         <script> 
+                                 let a =20 ; 
+                                 function emailaction ()
+                                 {
+                                 
+                                 
+                                 let email = document.getElementById('em1').value;
+                                 if(email=="")
+                                 {
+                                         document.getElementById('sts2').innerHTML="Email can't be empty";
+                                 }
+                                 else
+                                 {
+                                         var n = email.includes("@");
+                                         var m = email.includes(".");
+                                         if(n==true && m==true)
+                                         {
+                                                 document.getElementById('sts2').innerHTML=" ";
+                                         }
+                                         else
+                                         document.getElementById('sts2').innerHTML="Email Error";
+                                         
+                                 }
+                                 }
+                                 </script>
+
+                                  
+
+                                    
+                                    
+
+                                     <tr>
+                                        <td>Patient's Problem </td>
+                                        <td> <input type ="text" class="c2" name="prob" width="200px" id='prob1' ></input></td>
+                                        <td><font color="red" id="cpsts"> .</font> </td><br>
+                                    </tr>
+
+                                    
+                <script>
+                                         function getprob()
+                                        {
+                                                let val = document.getElementById('prob1').value;
+                                                return val;
+                                        }
+                                        function probaction()
+                                        {
+                                       
+                                        var x= getprob();
+                                        if(x=="")
+                                        {
+                                                document.getElementById('cpsts').innerHTML="Problem can't be empty";
+                                        }
+                                        else
+                                        {
+                                                  document.getElementById('cpsts').innerHTML="  ";
+                                               
+                                                
+                                        }
+               
+                
+                }
+                </script>
+
+                                    
+
+                                    
+                                    <tr>
+                    <td>Gender</td>
+                               <td> <input type="radio" name="gender" value="Male" id="r1">Male </td>
+                                <td><input type="radio" name="gender" value="Female" id="r2">Female </td>
+                               <td> <input type="radio" name="gender" value="Others" id="r3"> Others </td>
+                               <td><font color="red"id="gsts" > .</font></td>
+                  </tr>
+                             <script> 
+                                
+                                function genderaction()
+                                {
+                                
+                               
+                                let a = document.getElementById('r1').checked;
+                                let b = document.getElementById('r2').checked;
+                                let c = document.getElementById('r3').checked;
+
+                                if(a==false && b==false && c==false)
+                                {
+                                       
+                                        document.getElementById('gsts').innerHTML="Please select Gender ";
+                                }
+                                else
+                                {
+                                        
+                                        document.getElementById('gsts').innerHTML=" ";
+                                }
+                               
+                                
+                                }
+                                </script>
+
+
+         
+
+
+
+                <tr>
+                
+                    
+                    <td>
+                        <input type="submit" name="submit" class="c1" value="Submit" 
+                            onclick="snameaction(),nameaction(),emailaction(), probaction(),genderaction()"> 
+                        <a href="login.html"><b>Login</b></a>
+                    </td>
+
+                </tr>
+
+                        </table>
+                         <a href="doctorList.html"><b>Back</b></a>
+                            
+                            
+                            </form>
+                       </div>
+                   
+                   
+</body>
+</html>

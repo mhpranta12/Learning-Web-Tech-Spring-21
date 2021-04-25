@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="appoinmentLog.css">
+</head>
+<body>
+	<div class="login">
+	<form method="POST" action="../Controller/appoinmentCheck.php">
+		
+			<center><h1>Login</h1></center>
+			<table>
+				<tr>
+                                        <td>Patient's Name </td>
+                                        <td><input type ="text" class="c2" name="name" width="200px" id="nm1" > </input> </input></td>
+                                        <td><font color="red" id="sts"> .</font></td>
+                                        </tr>
+
+
+                                        <script>
+                                         function getname()
+                                        {
+                                                let cname = document.getElementById('nm1').value;
+                                                return cname;
+                                        }
+                                        function nameaction()
+                                        {
+                                       
+                                        var x= getname();
+                                        if(x=="")
+                                        {
+                                                document.getElementById('sts').innerHTML="Name can't be empty";
+                                        }
+                                        else
+                                        {
+                                                  document.getElementById('sts').innerHTML="  ";
+                                               
+                                                
+                                        }
+               
+                
+                }
+                </script>
+				<tr>
+                                        <td>Email </td>
+                                        <td><input type ="text" class="c2" name="email" width="200px" id="em1" ></input> </td>
+                                        <td><font color="red"id="sts2" > .</font>  
+                                        </td>
+                                          </tr>
+
+                         <script> 
+                                 let a =20 ; 
+                                 function emailaction ()
+                                 {
+                                 
+                                 
+                                 let email = document.getElementById('em1').value;
+                                 if(email=="")
+                                 {
+                                         document.getElementById('sts2').innerHTML="Email can't be empty";
+                                 }
+                                 else
+                                 {
+                                         var n = email.includes("@");
+                                         var m = email.includes(".");
+                                         if(n==true && m==true)
+                                         {
+                                                 document.getElementById('sts2').innerHTML=" ";
+                                         }
+                                         else
+                                         document.getElementById('sts2').innerHTML="Email Error";
+                                         
+                                 }
+                                 }
+                                 </script>
+
+                                  
+				<tr>
+					<td>Remember Me</td>
+					<td><input type="checkbox" name="rem" value=""></td>
+				</tr>
+
+
+				<tr>
+					
+					<td>
+						<input type="submit" name="submit" class="c1" value="Submit" 
+                            onclick="nameaction(),emailaction()"> 
+						<a href="home.php"><b>Logout</b></a>
+					</td>
+
+				</tr>
+
+
+
+			</table>
+		
+	</form>
+	</div>
+
+</body>
+
+</html>

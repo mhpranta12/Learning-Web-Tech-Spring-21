@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Assistant  Registration  </title>
+
+   <h1>Assistant  Registration  </h1> <hr>
+
+        
+        <style>
+            .c1
+            {
+                    background-color: rgb(125, 146, 238);
+                    width: 300px;
+            }
+            .c2
+            {
+                    background-color:ghostwhite;
+                    height: 18px;
+                    width: 300px;
+            }
+        </style>
+        
+         <form method="POST" onsubmit="validate()" action="../Controller/Add_Appointment_check.php"> 
+            Serial <br> <input type ="text" class="c2" name="name" width="200px" id="nm1" > </input><br>
+            <font color="red" id="sts"> .</font> <br>
+           
+        <br> <br><hr>
+                    
+    
+       
+
+        Patient Name <br> <input type ="text" class="c2" name="name" width="200px" id="pw1" > </input><br>
+            <font color="red" id="psts"> .</font> <br>
+            
+
+             Patient's Problem  <br> <input type ="text" class="c2" name="cpw" width="200px" id='cpw1' > </input><br>
+             <font color="red" id="cpsts"> .</font> <br>
+             
+
+             Patient's Phone  <br> <input type ="text" class="c2" name="email" width="200px" id="ph" > </input> <br> <font color="red"id="stsph" > .</font> <br><br> 
+                
+                <script> 
+                
+                function getname()
+                {
+                        let cname = document.getElementById('nm1').value;
+                        return cname;
+                }
+                function nameaction()
+                {
+               
+                var x= getname();
+                if(x=="")
+                {
+                        document.getElementById('sts').innerHTML="Serial can't be empty";
+                        return false;
+                }
+                else
+                {
+                          document.getElementById('sts').innerHTML="  ";
+                       return true;
+                        
+                }
+               
+                
+                }
+
+
+                 function pwaction ()
+                {
+            
+            
+                let pw = document.getElementById('pw1').value;
+                if(pw=="")
+                {
+                    document.getElementById('psts').innerHTML="Password can't be empty";
+                    return false;
+                }
+                else
+                {
+                    var n = pw.includes("@"); // checking the existance of a string .This function return true/false 
+                    var m = pw.includes("#");
+                    if(n==true && m==true)
+                    {
+                            document.getElementById('psts').innerHTML=" ";
+                            return true;
+                    }
+                    else
+                    {
+                        document.getElementById('psts').innerHTML="Pasword Error";
+                        return false;
+                    }
+                    
+                }
+                }
+                
+                function getpw()
+                {
+            
+            
+                let val = document.getElementById('pw1').value;
+                 return val;
+                }
+
+
+                function cpwaction()
+                {
+                
+                var crpw= getpw();
+                let cpw = document.getElementById('cpw1').value;
+                if(cpw=="")
+                {
+                        document.getElementById('cpsts').innerHTML="Patient's Problem can't be empty";
+                }
+                else 
+                             document.getElementById('cpsts').innerHTML=" ";
+
+                }
+                function phaction ()
+                {
+         
+         
+                let phone = document.getElementById('ph').value;
+                if(phone=="")
+                {
+                 document.getElementById('stsph').innerHTML="Phone can't be empty";
+                 return false;
+                }
+                else
+                {
+                 var n = phone.includes("0"); // checking the existance of a string .This function return true/false 
+                 var m = phone.includes("1");
+                 if(n==true && m==true)
+                 {
+                         document.getElementById('stsph').innerHTML=" ";
+                         return true;
+                 }
+                 else
+                 {
+                        document.getElementById('stsph').innerHTML="Phone No. Error";
+
+                        return false;
+
+                 }
+                 
+                }
+                }
+                function validate()
+                {
+                        error = false;
+                                                var a1= nameaction();
+                                                var a2= pwaction();
+                                                var a3= cpwaction();
+                                                var a4= phaction();
+                                                if (a1==false || a2==false  || a3==false || a4==false )
+                                                {
+                                                        error=true;
+                                                }
+
+                                                if(error)
+                                                {
+                                                return false;
+                                                }
+                                                 else
+                                                {
+                                                return true;
+                                                }
+                }
+         </script>
+         <br> <br><hr>
+                     
+     
+        </fieldset>
+        </form>
+                        <fieldset> 
+                                <legend> Gender</legend>
+                           
+                           
+                                
+                                     Gender  <br> <input type="radio" name="gender" id="r1">Male
+                                    <input type="radio" name="gender" id="r2">Female
+                                    <input type="radio" name="gender" id="r3">Other
+                                    <br/> <br>
+                                    <font color="red"id="gsts" > .</font>
+                                       
+                                <script> 
+                                
+                                function genderaction ()
+                                {
+                                
+                               
+                                let a = document.getElementById('r1').checked;
+                                let b = document.getElementById('r2').checked;
+                                let c = document.getElementById('r3').checked;
+
+                                if(a==false && b==false && c==false)
+                                {
+                                       
+                                        document.getElementById('gsts').innerHTML="Please select Gender ";
+                                }
+                                else
+                                {
+                                        
+                                        document.getElementById('gsts').innerHTML=" ";
+                                }
+                               
+                                
+                                }
+                                </script>
+                                <br> <br><hr>
+                                            
+                            </fieldset>
+                            
+
+
+
+                            
+                              
+                        </form>
+                        <br>
+                            <input type="submit" name="submit" class="c1" value="Add" > 
+                            <br>
+                            
+      
+</body>
+</html>

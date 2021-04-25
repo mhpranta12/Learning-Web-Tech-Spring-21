@@ -1,0 +1,38 @@
+body{
+	background-color: #b2bec3;
+	width: 100%;
+	height: 100vh;
+
+	}
+.doctorList{
+
+	width: 1200px;
+	margin: 0px auto;
+	opacity: .7;
+	margin-top: 70px;
+	padding: 15px;
+	border: 1px solid #fff;
+}
+.doctorList table{
+	width: 100%;
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+.doctorList th{
+	border: 2px solid black;
+	height: 40px;
+
+}
+.doctorList td{
+	border: 2px solid black;
+	height: 25px;
+	padding-left: 10px;
+
+}
+.doctorList form a
+{
+	color: blue;
+
+}
+
+

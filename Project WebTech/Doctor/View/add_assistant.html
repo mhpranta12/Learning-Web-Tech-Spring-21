@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Add Assistant</title>
+  
+        
+                         
+                    
+    <link rel="stylesheet" type="text/css" href="../View/style.css" />
+
+                            <fieldset>
+
+                                <legend><b> Add Assistant  </b></legend>
+                                 <form method="POST" class="form" action="../Controller/Registration_Assistant_check.php">
+                                    Name  : <input type ="text" name="name" width="200px" placeholder="Enter Name"> </input><br><hr>
+                                    Email  : <input type ="email" name="email"placeholder="Enter Email "> </input><br><hr>
+                    
+                                    Username  : <input type ="text" name="uname"placeholder="Enter Unique Username"> </input><br><hr>
+                                    Password  : <input type ="text"name="upassword"placeholder="Password should contain #/@/%/$ and should be more then 8 characters"> </input><br><hr>
+                                    Confirm Password  : <input type ="text"name="cpassword"placeholder="Re-Type password"> </input><br><hr>
+                    
+                                    <fieldset>
+                                        <legend>Degree</legend>
+                                        
+                                        <input type="checkbox" name="degree[]" value="Diploma in Pathology ">Diploma in Pathology 
+                                        <input type="checkbox" name="degree[]" value="Diploma in Psychology ">Diploma in Psychology 
+                                        <input type="checkbox" name="degree[]" value="Diploma in Cardiology "> Diploma in Cardiology 
+                                        <input type="checkbox" name="degree[]" value="Diploma in Lab Management"> Diploma in Lab Management
+                                        <input type="checkbox" name="degree[]" value="Diploma in Nursing"> Diploma in Nursing
+                                        <br> <br>
+                                                    
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Designation</legend>
+                                        <select id="desig1" name="desig">
+                                            <option value=""> </option>
+                                            <option value="Nurst">Nurse</option>
+                                            <option value="Word Boy">Word Boy</option>
+                                            <option value="OT Assistant">OT Assistant</option>
+                                            <option value="Research Assistant">Research Assistant</option>
+                                            <option value="Lab Assistant">Lab Assistant</option>
+                                      
+                                        </select>
+                                        
+                                    </fieldset>
+                            <fieldset>
+                                <legend>Gender</legend>
+                                <input type="radio"  name="gender" value="Male">Male
+                                <input type="radio" name="gender" value="Female">Female
+                                <input type="radio" name="gender" value="Others"> Others <br> <br>
+                                            
+                            </fieldset><hr>
+                    
+                            <fieldset>
+                                <legend>Date Of Birth</legend>
+                                DD  <input type="text" width="80px" name="myday" value="" placeholder="Day"> 
+                                MM  <input type="text" name="mymonth" value=""placeholder="Month">
+                                YY  <input type="text" name="myyear" value=""placeholder="Year"> <br> <br>
+                                            
+                            </fieldset>
+                                <br> <br><hr>
+                                            <input type="submit"  class="fsubmit" name="submit" value="Submit"><br> <br>
+                                            <input type="reset" class="fsubmit">
+                            </fieldset>
+                            </form>
+                        
+    
+    
+</body>
+</html>

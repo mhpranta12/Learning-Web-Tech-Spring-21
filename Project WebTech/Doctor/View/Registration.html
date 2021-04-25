@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>User Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="../View/style.css" />
+        <table align='center' border="1" width="1100px">
+                         
+                    
+                        <tr>
+                        <td height=400px;>
+                            
+                            <fieldset>
+
+                                <legend><b> Doctor's Registration  </b></legend>
+                                <form method="GET">
+                                    Name  : <input type ="text" name="name" width="200px" placeholder="Enter Name" id="n1"> </input><br>
+                                    <h1 id="nameerror1"> .</h1>
+                                    <font color="red" id="nameerror"> .</font>
+                                    <hr>
+                                    Email  : <input type ="email" name="email"placeholder="Enter Email " id="email1"> </input><br>
+                                    <font color="red" id="emailerror"> .</font>
+                                    <hr>
+                    
+                                    Username  : <input type ="text" name="uname"placeholder="Enter Unique Username"> </input><br><hr>
+                                    Password  : <input type ="text"name="upassword"placeholder="Password should contain #/@/%/$ and should be more then 8 characters"> </input><br><hr>
+                                    Confirm Password  : <input type ="text"name="cpassword"placeholder="Re-Type password"> </input><br><hr>
+                                    Age  : <input type ="text"name="age"placeholder="Age"> </input><br><hr>
+                                    <fieldset>
+                                        <legend>Degree</legend>
+                                        <input type="checkbox"  name="degree[]" value="MBBS">MBBS
+                                        <input type="checkbox" name="degree[]" value="PHD">PHD
+                                        <input type="checkbox" name="degree[]" value="M.Phil">M.Phil
+                                        <input type="checkbox" name="degree[]" value="DPhil"> DPhil
+                                        <input type="checkbox" name="degree[]" value="FCPS"> FCPS
+                                        <input type="checkbox" name="degree[]" value="FRCP"> FRCP
+                                        <br> <br>
+                                                    
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Designation</legend>
+                                        <select id="desig1" name="desig">
+                                            <option value=""> </option>
+                                            <option value="Junior Consultant">Junior Consultant</option>
+                                            <option value="Medecal Officer">Medecal Officer</option>
+                                            <option value="Medicine Specialist">Medicine Specialist</option>
+                                            <option value="Psychriatic">Psychriatic</option>
+                                            <option value="Screen Specialist">Screen Specialist</option>
+                                            <option value="Anaesthesiologist">Anaesthesiologist</option>
+                                            <option value="Cardiologist">Cardiologist</option>
+                                            <option value="Surgeon"> Surgeon</option>
+                                           
+                                          
+                                        </select>
+                                        
+                                    </fieldset>
+                            <fieldset>
+                                <legend>Gender</legend>
+                                <input type="radio"  name="gender" value="Male">Male
+                                <input type="radio" name="gender" value="Female">Female
+                                <input type="radio" name="gender" value="Others"> Others <br> <br>
+                                            
+                            </fieldset><hr>
+                            <script>
+                                function nameaction()
+                                {
+                                let b = document.getElementById('n1').Value;
+                                if(b=="")
+                                {
+                                    document.getElementById('nameerror').innerHTML="Name is empty";
+                                }
+                                else
+                                {
+                                 document.getElementById('nameerror').innerHTML="OK ";
+                                }
+                                }
+                                function emailaction()
+                                {
+                                let email = document.getElementById("email1").Value;
+                                if(email=="")
+                                {
+                                    document.getElementById("emailerror").innerHTML="Email is empty";
+                                }
+                                else
+                                {
+                                 document.getElementById("emailerror").innerHTML=" ";
+                                }
+                                }
+         
+                            </script>
+                            <fieldset>
+                                <legend>Date Of Birth</legend>
+                                DD  <input type="text" width="80px" name="myday" value="" placeholder="Day"> 
+                                MM  <input type="text" name="mymonth" value=""placeholder="Month">
+                                YY  <input type="text" name="myyear" value=""placeholder="Year"> <br> <br>
+                                            
+                            </fieldset>
+                                <br> <hr>
+                                            <input type="submit" class="fsubmit" name="submit" value="Submit" onclick="nameaction(),emailaction()"> <br> <br>
+                                            <input type="reset" class="fsubmit" >
+                            </fieldset>
+                           
+                        </td>
+                    </tr>
+                  
+         </form>
+                    
+        </table>
+    
+    
+</body>
+</html>

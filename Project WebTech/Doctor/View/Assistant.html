@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Assistant  Registration  </title>
+
+   <h1>Assistant  Registration  </h1> <hr>
+   <link rel="stylesheet" type="text/css" href="../View/style.css" />
+        
+        <style>
+            .c1
+            {
+                    background-color: rgb(125, 146, 238);
+                    width: 300px;
+            }
+            .c2
+            {
+                    background-color:rgb(166, 166, 235);
+                    height: 18px;
+                    width: 600px;
+            }
+        </style>
+        
+        <form method="POST"    onsubmit="return validate()" action="../Controller/Registration_Assistant_check.php"> 
+            Name <br> <input type ="text" class="form" name="name" width="200px" id="nm1" > </input><br>
+            <font color="red" id="sts"> .</font> <br>
+               
+            <script> 
+
+                function getname()
+                {
+                        let cname = document.getElementById('nm1').value;
+                        return cname;
+                }
+                function nameaction()
+                {
+               
+                var x= getname();
+                if(x=="")
+                {
+                        document.getElementById('sts').innerHTML="Name can't be empty";
+                        return false;
+                }
+                else
+                {
+                
+                          document.getElementById('sts').innerHTML="  ";
+                       return true;
+                     
+                }
+               
+                
+                }
+                </script>
+        <br> <br><hr>
+        UserName <br> <input type ="text" class="form" name="uname" width="200px" id="unm1" > </input><br>
+        <font color="red" id="sts"> .</font> <br>       
+        <br> <br><hr>
+       
+
+        Password <br> <input type ="text" class="form" name="upassword" width="200px" id="pw1" > </input><br>
+            <font color="red" id="psts"> .</font> <br>
+            <script>
+            function pwaction ()
+            {
+            
+            
+            let pw = document.getElementById('pw1').value;
+            if(pw=="")
+            {
+                    document.getElementById('psts').innerHTML="Password can't be empty";
+                    return false;
+            }
+            else
+            {
+                    var n = pw.includes("@"); // checking the existance of a string .This function return true/false 
+                    var m = pw.includes("#");
+                    if(n==true || m==true)
+                    {
+                            document.getElementById('psts').innerHTML=" ";
+                            return true;
+                    }
+                    else
+                    {
+                        document.getElementById('psts').innerHTML="Pasword Error";
+                        return false;
+                    }
+                    
+            }
+            }
+            </script>
+             Confirm Password <br> <input type ="text" class="form" name="cpassword" width="200px" id='cpw1' > </input><br>
+             <font color="red" id="cpsts"> .</font> <br>
+             <script>
+                function getpw()
+            {
+            
+            
+            let val = document.getElementById('pw1').value;
+            return val;
+            }
+
+
+                function cpwaction()
+                {
+                
+                var crpw= getpw();
+                let cpw = document.getElementById('cpw1').value;
+                if(cpw=="")
+                {
+                        document.getElementById('cpsts').innerHTML="Confirm Password can't be empty";
+                        return false;
+                }
+                else if (cpw!="")
+                {
+                       if (crpw!=cpw)
+                       {
+                        document.getElementById('cpsts').innerHTML="Pasword Doesn't Match ";
+                        return false;
+                               
+                        }
+                        else
+                        {
+                             document.getElementById('cpsts').innerHTML=" ";
+                             return true;
+
+                        }
+                        
+                }
+                }
+                </script>
+             Email  <br> <input type ="text" class="form" name="email" width="200px" id="em1" > </input> <br> <font color="red"id="sts2" > .</font> <br><br> 
+                
+         <script> 
+         
+         function emailaction ()
+         {
+         
+         
+         let email = document.getElementById('em1').value;
+         if(email=="")
+         {
+                 document.getElementById('sts2').innerHTML="Email can't be empty";
+                 return false;
+         }
+         else
+         {
+                 var n = email.includes("@"); // checking the existance of a string .This function return true/false 
+                 var m = email.includes(".");
+                 if(n==true && m==true)
+                 {
+                         document.getElementById('sts2').innerHTML=" ";
+                         return true;
+                 }
+                 else
+                 {
+                        document.getElementById('sts2').innerHTML="Email Error";
+
+                        return false;   
+                 }
+                 
+         }
+         }
+         </script>
+         <br> <br><hr>
+                     
+     
+        </fieldset>
+        
+                        <fieldset> 
+                                <legend> Gender</legend>
+                           
+                           
+                                
+                                      <br> <input type="radio" name="gender" value="Male" id="r1">Male
+                                    <input type="radio" name="gender" value="Female"id="r2">Female
+                                    <input type="radio" name="gender"value="Other"  id="r3">Other
+                                    <br/> <br>
+                                    <font color="red"id="gsts" > .</font>
+                                       
+                                <script> 
+                                
+                                function genderaction ()
+                                {
+                                
+                               
+                                let a = document.getElementById('r1').checked;
+                                let b = document.getElementById('r2').checked;
+                                let c = document.getElementById('r3').checked;
+
+                                if(a==false && b==false && c==false)
+                                {
+                                       
+                                        document.getElementById('gsts').innerHTML="Please select Gender ";
+                                        return false ;
+                                }
+                                else
+                                {
+                                        
+                                        document.getElementById('gsts').innerHTML=" ";
+                                                                                 return true;
+
+                                }
+                               
+                                
+                                }
+                                </script>
+                                <br> <br><hr>
+                                            
+                            </fieldset>
+                            
+
+
+
+                            <fieldset> 
+                                <legend> Date of Birth</legend>
+                           
+                           
+                                
+                                    DD   <input type ="text"  class="form"name="myday" id="dd" > <br>
+                                    MM <input type ="text"class="form" name="mymonth" id="mm" > <br>
+                                    YY   <input type ="text"class="form" name="myyear" id="yy" > <br>
+                                     <br>
+                                    <font color="red" id="sts4"> .</font>
+                                    <font color="red" id="sts5"> .</font>
+                                     <font color="red" id="sts6"> .</font>                                   
+                                <script> 
+                                
+                                function dobaction ()
+                                {
+                                
+                               
+                                let a = document.getElementById('dd').value;
+                                let b = document.getElementById('mm').value;
+                                let c = document.getElementById('yy').value;
+
+                                if(a=="" || b=="" || c=="")
+                                {
+                                       
+                                        document.getElementById('sts4').innerHTML="Any field can't be empty";
+                                        return false;
+                                }
+                                else 
+                                {
+                                    if (a>31 || a<1)
+                                    {
+                                        document.getElementById('sts4').innerHTML="Date Error";
+                                        return false;
+                                    }
+                                    else
+                                    {
+                                        document.getElementById('sts4').innerHTML=" ";
+                                        return true;
+
+                                    }
+                                    if (b>12 || b<0)
+                                    {
+                                        document.getElementById('sts5').innerHTML="Month Error";
+                                        return false;
+                                    }
+                                    else
+                                    {
+                                        document.getElementById('sts5').innerHTML=" ";
+                                        return true;
+
+                                    }
+
+                                      if (c>2021  || c<1800)
+                                    {
+                                        document.getElementById('sts6').innerHTML="Year Error";
+                                        return false;
+                                    }
+                                    else
+                                    {
+                                        document.getElementById('sts6').innerHTML=" ";
+                                        return true;
+                                    }  
+                                        
+                                }
+                               
+                                
+                                }
+                                </script>
+                                <br> <br><hr>
+                                            
+                            </fieldset>
+                           
+
+
+                            <fieldset> 
+                                <legend > Degree</legend>
+                           
+                           
+                                
+                                    <br> <input type="checkbox" name="degree" id="d1">Diploma in Pathology
+                                    <input type="checkbox" name="degree" id="d2">Diploma in Psychology
+                                    <input type="checkbox" name="degree" id="d3">Diploma in Cardiology
+                                    <input type="checkbox" name="degree" id="d4">Diploma in Lab Management
+                                     <input type="checkbox" name="degree" id="d5">Diploma in Nursing
+
+                                    <br/>
+                                    <font color="red" id="sts7"> .</font>
+                                    <br>
+                                        
+                                <script> 
+                                
+                                function degreeaction ()
+                                {
+                                
+                               
+                                let a = document.getElementById('d1').checked;
+                                let b = document.getElementById('d2').checked;
+                                let c = document.getElementById('d3').checked;
+                                let d = document.getElementById('d4').checked;
+                                let e = document.getElementById('d5').checked;
+
+
+                                if(a==false && b==false && c==false && d==false && e==false)
+                                {
+                                        document.getElementById('sts7').innerHTML=" Please select degree";
+                                        return false;
+                                }
+                                else
+                                {
+                                       document.getElementById('sts7').innerHTML=" ";
+                                       return true;
+                                }
+                               
+                                
+                                }
+                                </script>
+                                <br> <br>
+                               
+                                <hr>
+                                            
+                            </fieldset>
+                            Designation <br>
+                            <select id="desig1" name="desig">
+                                <option value=""> </option>
+                                <option value="Junior Consultant">Nurse</option>
+                                <option value="Medecal Officer">Word Boy</option>
+                                <option value="OT Assistant">OT Assistant</option>
+                                <option value="Psychriatic">Lab Assistant</option>
+                                <option value="Research Assistant">Research Assistant</option>
+                                
+                               
+                              
+                            </select><br>
+                            <font color="red" id="sts8"> .</font>
+                            <script> 
+                                
+                                function designationaction()
+                                {
+                                
+                               
+                                let cdesig = document.getElementById('desig1').value;
+                                
+
+                                if(cdesig=="")
+                                {
+                                       
+                                        document.getElementById('sts8').innerHTML="Please select any Designation ";
+                                        return false;
+                                }
+                                else
+                                {
+                                       document.getElementById('sts8').innerHTML=" ";
+                                       return true;
+                                }
+                               
+                                
+                                }
+                                </script>
+
+                                 <script> 
+                                
+                                
+
+                                function validate()
+                                {
+                                         error = false;
+                                        /*let email = document.getElementById('em1').value;
+                                        let cdesig = document.getElementById('desig1').value;
+                                        let a = document.getElementById('dd').value;
+                                        let b = document.getElementById('mm').value;
+                                        let c = document.getElementById('yy').value;
+
+                                        if(email=="" || cdesig=="" || a=="" || b=="" || c=="")
+                                        {*/
+                                                var a1= nameaction();
+                                                var a2= emailaction();
+                                                var a3= degreeaction();
+                                                var a4= designationaction();
+                                                var a5= dobaction();
+                                                var a6= genderaction();
+                                                var a7= pwaction();
+                                                var a8= cpwaction();
+
+                                                if (a1==false || a2==false  || a3==false || a4==false|| a5==false || a7==false || a8==false )
+                                                {
+                                                        error=true;
+                                                }
+                                               
+                                               
+                                                
+                                        if(error)
+                                        {
+                                                return false;
+                                        }
+                                        else
+                                        {
+                                                return true;
+                                        }
+                                }
+                                
+                                </script>
+                       
+                        <br>
+                            <input type="submit" name="submit" class="c1" value="Register" >
+                            <input type="reset" name="reset" class="c1" value="Reset" >
+                            <br><br><br>
+                            <br>
+                            
+                        </form>
+</body>
+</html>

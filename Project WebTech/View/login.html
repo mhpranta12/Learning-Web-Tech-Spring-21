@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<meta charset="utf-8" name="viewport" content="width=divice-width, initia-scale=1">
+	<link rel="stylesheet" type="text/css" href="../Style/CSS/style_login.css">
+
+
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body>
+	<div class="container">
+		<div class="img">
+			<img src="../Resources/Images/medical_research.svg">
+		</div>
+		<div class="login-container">
+			<form method="POST" class="login_form" name="form" onsubmit="return validated()"  action="../controller/login_check.php" >
+				<img class="avatar" src="../Resources/Images/profile_pic.svg">
+				<h2>Welcome</h2>
+				<div class="input-div one">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div>
+						<h5>Email Address</h5>
+						<input class="input" type="text" name="user_email" placeholder="Email">
+						<div id="email_error">Please Enter your Email</div>
+						
+					</div>
+				</div>
+
+				<div class="input-div two">
+					<div class="i">
+						<i class="fas fa-lock"></i>
+					</div>
+					<div>
+						<h5>Password</h5>
+						<input class="input" type="password" name="password" placeholder="Password">
+						<div id="password_error">Please Enter your Password</div>
+					</div>
+				</div>
+				<a href="patient_registration.html">Patient? Click here to Sign-Up</a>
+				<input type="submit" class="btn" name="submit" value="submit">
+
+			</form>
+		</div>
+
+	</div>
+</body>
+
+<script type="text/javascript">
+	"use strict"
+	let email = document.forms['form']['user_email'];
+
+	let password = document.forms['form']['password'];
+
+	let email_error = document.getElementById('email_error');
+
+	let password_error = document.getElementById('password_error');
+
+
+
+	function validated(){
+		if(email.value.length < 1)
+		{
+			email.style.border = "1px solid red";
+			email_error.style.display = "block";
+			email.focus();
+			return false;
+		}
+
+		
+
+		if(password.value.length < 1)
+		{
+			password.style.border = "1px solid red";
+			password_error.style.display = "block";
+			password.focus();
+			return false;
+		}
+
+	}
+	
+
+</script>
+
+
+</html>

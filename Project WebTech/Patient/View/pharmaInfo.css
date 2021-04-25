@@ -1,0 +1,37 @@
+body{
+	background-color: #b2bec3;
+	width: 100%;
+	height: 100vh;
+
+	}
+.pharmaInfo{
+
+	width: 700px;
+	margin: 0px auto;
+	opacity: .7;
+	margin-top: 70px;
+	padding: 15px;
+	border: 1px solid #fff;
+}
+.pharmaInfo table{
+	width: 100%;
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+.pharmaInfo th{
+	border: 2px solid black;
+	height: 40px;
+
+}
+.pharmaInfo td{
+	border: 2px solid black;
+	height: 25px;
+	padding-left: 10px;
+
+}
+.pharmaInfo form a
+{
+	color: blue;
+
+}
+
